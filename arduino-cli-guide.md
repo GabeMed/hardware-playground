@@ -73,6 +73,8 @@ hardware-playground/
 │   └── ex01-led-blink.ino
 ├── ex02-red-green-blink/
 │   └── ex02-red-green-blink.ino
+├── ex03-ldr-read/
+│   └── ex03-ldr-read.ino
 └── ...
 ```
 
