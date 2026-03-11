@@ -64,13 +64,28 @@ arduino-cli sketch new MySketch
 
 This creates a `MySketch/MySketch.ino` file. You can also just create the `.ino` file manually.
 
+**Important:** The `.ino` filename must match its parent directory name. This repo uses one directory per exercise:
+
+```
+hardware-playground/
+├── arduino-cli-guide.md
+├── ex01-led-blink/
+│   └── ex01-led-blink.ino
+├── ex02-red-green-blink/
+│   └── ex02-red-green-blink.ino
+└── ...
+```
+
 ## 6. Edit your code
 
-Open and edit your `.ino` sketch file (e.g. `ledBlink.ino`).
+Open and edit the `.ino` file inside the exercise directory you want to work on.
 
 ## 7. Compile
 
+`cd` into the exercise directory first, then compile:
+
 ```bash
+cd ex02-red-green-blink
 arduino-cli compile --fqbn arduino:avr:uno .
 ```
 
