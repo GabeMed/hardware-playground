@@ -1,0 +1,20 @@
+name: Compile sketches
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: arduino/setup-arduino-cli@v2
+      - name: Install the AVR core
+        run: make setup
+      - name: Compile every exercise for Arduino Uno
+        run: make compile
